@@ -1,16 +1,21 @@
 ## Hi there 👋
 
-<!--
-**thenewsletterindex/thenewsletterindex** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
+We are the The Newsletter Index ✉️. We are a free, open-source and crowdsourced index for newsletters and RSS feeds.
 
-Here are some ideas to get you started:
+As we run on an MIT licence, you can take the code provided here and use it for anything, including commercial use.
+We just ask you to credit us with a link to thenewsletterindex.info when you use our code.
 
-- 🔭 I’m currently working on ...
-- 🌱 I’m currently learning ...
-- 👯 I’m looking to collaborate on ...
-- 🤔 I’m looking for help with ...
-- 💬 Ask me about ...
-- 📫 How to reach me: ...
-- 😄 Pronouns: ...
-- ⚡ Fun fact: ...
--->
+You can advertise with us @ <a href="https://thenewsletterindex.info">this page</a>. We Hope You Enjoy Using Our Service!
+
+Links:
+<a href="https://thenewsletterindex.info/api/">API</a>
+<a href="https://thenewsletterindex.info/contact">Contact/Advertise</a>
+
+Want to contribute? Absolutely🙃!
+(if you do decide to contribute major changes to the codebase ie. framework change will not be considered.)
+
+Thanks!
+✉️✉️✉️✉️✉️✉️✉️✉️✉️✉️✉️✉️✉️✉️✉️✉️✉️✉️✉️✉️✉️✉️✉️✉️✉️✉️✉️✉️✉️✉️✉️✉️✉️✉️✉️✉️✉️✉️✉️✉️✉️✉️✉️✉️✉️✉️✉️✉️✉️✉️✉️✉️✉️✉️✉️✉️✉️✉️✉️✉️✉️✉️✉️✉️✉️✉️✉️✉️✉️✉️✉️✉️✉️
+
+
+
