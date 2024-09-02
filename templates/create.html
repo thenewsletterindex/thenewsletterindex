@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create ✉️✉️✉️</title>
+    <!-- Bootstrap CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            background-color: #121212;
+            color: #ffffff;
+            font-family: Arial, sans-serif;
+        }
+        .container {
+            background-color: #1c1c1c;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.5);
+        }
+        .form-control {
+            background-color: #2c2c2c;
+            border: 1px solid #4a4a4a;
+            color: #ffffff;
+        }
+        .form-control:focus {
+            background-color: #2c2c2c;
+            border-color: #6c757d;
+            box-shadow: none;
+            color: #ffffff;
+        }
+        .btn-custom {
+            background-color: #4a4a4a;
+            color: #ffffff;
+            border: none;
+        }
+        .btn-custom:hover {
+            background-color: #5c5c5c;
+        }
+    </style>
+</head>
+<body>
+    <header class="d-flex justify-content-between align-items-center p-3 bg-black">
+        <div class="container">
+            <div class="d-flex flex-wrap align-items-center justify-content-between">
+                <a href="/" class="d-flex align-items-center mb-2 mb-lg-0 text-white text-decoration-none">
+                    <svg class="bi me-2" width="40" height="32" role="img" aria-label="Bootstrap">
+                        <use xlink:href="#bootstrap"></use>
+                    </svg>
+                </a>
+                
+                <button class="btn btn-outline-light me-2" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar">
+                    ☰ Menu
+                </button>
+
+                <form class="col-12 col-lg-auto mb-3 mb-lg-0 me-lg-3">
+                    <input type="search" id="search" class="form-control form-control-dark" placeholder="Search..." aria-label="Search">
+                </form>
+    
+
+    
+                <div class="text-end ms-auto">
+                    <a href="/search"><button type="button" class="focus:outline-none text-white bg-purple-700 hover:bg-purple-800 focus:ring-4 focus:ring-purple-300 font-medium rounded-lg text-sm px-5 py-2.5 mb-2 dark:bg-purple-600 dark:hover:bg-purple-700 dark:focus:ring-purple-900">Search</button></a>
+                    <a href="/signin" class="btn btn-outline-light me-2">Sign In</a>
+                    <a href="/signup" class="btn btn-outline-light me-2">Sign Up</a>
+                </div>
+            </div>
+        </div>
+    </header>
+    
+    <!-- Offcanvas Sidebar -->
+    <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
+        <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="offcanvasNavbarLabel">Menu</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+        </div>
+        <div class="offcanvas-body">
+            <ul class="nav flex-column">
+                <li class="nav-item">
+                    <a class="nav-link" href="/">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/create">Create</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/dash">Dashboard</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/findanewsletter">Find A Newsletter</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/api">API</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/contact">Contact/Advertise</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <div class="container mt-5">
+        <h2 class="text-center mb-4">Index A Newsletter Or RSS Feed</h2>
+        <br/>
+        <p class="text center mb-4">We iframe your url (https://example.com) into our site, so please make sure it is allowed.</p>
+        <p class="text center mb-4">"https://" is mandatory in the URL section!</p>
+        <form method="POST" enctype="multipart/form-data">
+
+            <label for="rss" class="form-label">RSS Feed Or Newsletter</label>
+            <select class="form-select" id="rss" name="rss" required>
+                <option>Newsletter</option>
+                    <option>RSS Feed</option>
+                </select>
+            <div class="mb-3">
+                <label for="name" class="form-label">Name Of Newsletter/RSS Feed</label>
+                <input type="text" class="form-control" id="name" name="name" required>
+            </div>
+            
+            <div class="mb-3">
+                <label for="logo" class="form-label">Logo (Image)</label>
+                <input type="file" class="form-control" id="logo" name="logo" accept="image/*" required>
+            </div>
+            <div class="mb-3">
+                <label for="short_description" class="form-label">Short Description</label>
+                <input type="text" class="form-control" id="short_description" name="short_description" required>
+            </div>
+            <div class="mb-3">
+                <label for="long_description" class="form-label">Long Description</label>
+                <textarea class="form-control" id="long_description" name="long_description" rows="4" required></textarea>
+            </div>
+            <div class="mb-3">
+                <label for="url" class="form-label">URL</label>
+                <input type="url" class="form-control" id="url" name="url" required>
+            </div>
+
+            <div class="mb-3">
+                <label for="rssurl" class="form-label">If you have an RSS Feed Put the URL to that feed here if you don't just put a random URL:</label>
+                <input type="url" class="form-control" id="rssurl" name="rssurl" required>
+            </div>
+
+            <div class="mb-3">
+                <label for="contact_email" class="form-label">Contact Email</label>
+                <input type="email" class="form-control" id="contact_email" name="contact_email" required>
+            </div>
+
+            <div class="mb-3">
+                <label for="readtime" class="form-label">How Long Does It Take To Read (mins)?</label>
+                <input type="number" class="form-control" id="readtime" name="readtime" required>
+            </div>
+
+            <label for="writingstyle" class="form-label">Writing Style</label>
+            <select class="form-select" id="writingstyle" name="writingstyle" required>
+                <option>Fast-Paced & Energetic</option>
+                    <option>Leisurely & Relaxed</option>
+                    <option>Conversational & Relatable</option>
+                    <option>Informative & Educational</option>
+                    <option>Inspirational & Motivational</option>
+
+                </select>
+
+                <label for="free" class="form-label">Free Or Paid?</label>
+                <select class="form-select" id="free" name="free" required>
+                    <option>Free</option>
+                        <option>Paid</option>
+                        <option>Freemium</option>
+                        <option>Free With Ads</option>
+    
+                    </select>
+            
+                    <label for="sentat" class="form-label">How Often Is It Sent?</label>
+            <select class="form-select" id="sentat" name="sentat" required>
+                <option>Daily</option>
+                    <option>Weekly</option>
+                    <option>Bi-Weekly</option>
+                    <option>Monthly</option>
+                    <option>Annually</option>
+                </select>
+
+            <label for="category" class="form-label">Category</label>
+            <select class="form-select" id="category" name="category" required>
+                                    <option value="technology">Technology</option>
+                                    <option value="development">Development</option>
+                                    <option value="JavaScript">JavaScript</option>
+                                    <option value="Python">Python</option>
+                    <option value="business">Business</option>
+                    <option value="sales">Sales</option>
+                    <option value="SideHustles">Side Hustles</option>
+                    <option value="marketing">Marketing</option>
+                    <option value="finance">Finance</option>  
+                    <option value="Web3">Web3</option>
+                    <option value="health">Health</option>
+                    <option value="fitness">Fitness</option>
+                    <option value="education">Education</option>
+                    <option value="entertainment">Entertainment</option>  
+
+                    <option value="travel">Travel</option>
+                    <option value="food">Food</option>  
+
+                    <option value="fashion">Fashion</option>
+                    <option value="gaming">Gaming</option>
+                    <option value="sports">Sports</option>
+                    <option value="politics">Politics</option>  
+
+                    <option value="science">Science</option>
+                    <option value="art">Art</option>  
+
+                    <option value="music">Music</option>
+                    <option value="books">Books</option>
+                    <option value="lifestyle">Lifestyle</option>
+                    <option value="news">News</option>
+            </select>
+        </div>
+            <button type="submit" class="btn btn-custom w-100">Submit</button>
+
+        </form>
+    </div>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        // JavaScript to preview the logo image
+        document.getElementById('logo').addEventListener('change', function(event) {
+            const file = event.target.files[0];
+            const preview = document.getElementById('logoPreview');
+
+            if (file) {
+                const reader = new FileReader();
+                reader.onload = function(e) {
+                    preview.src = e.target.result;
+                    preview.style.display = 'block';
+                };
+                reader.readAsDataURL(file);
+            } else {
+                preview.style.display = 'none';
+            }
+        });
+    </script>
+</body>
+</html>
